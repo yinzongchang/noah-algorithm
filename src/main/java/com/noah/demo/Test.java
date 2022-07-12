@@ -11,25 +11,37 @@ import java.util.Arrays;
  */
 public class Test {
 
+    private volatile Long a = 1L;
+
 
     public static void main(String[] args) {
 
 
-        int[] nums = {-1, 0, 1, 2, -1, -4};
 
-        Arrays.sort(nums);
+//
+//        int[] nums = {-1, 0, 1, 2, -1, -4};
+//
+//        Arrays.sort(nums);
+//
+//
+//        String s = "123";
+//
+//        for (char c : s.toCharArray()) {
+//
+//            int num = (c - '0') + 1;
+//
+//            System.out.println(num);
+//
+//        }
 
 
-        String s = "123";
-
-        for (char c : s.toCharArray()) {
-
-            int num = (c - '0') + 1;
-
-            System.out.println(num);
-
-        }
-
+        String B = "𝄞"; // 这个就是那个音符字符，只不过由于当前的网页没支持这种编码，所以没显示。
+        String C = "\uD834\uDD1E";// 这个就是音符字符的UTF-16编码
+        System.out.println(C);
+        System.out.println(B.length());
+        System.out.println(C.length());
+        System.out.println(B.codePointCount(0,B.length()));
+        System.out.println(C.codePointCount(0,B.length()));
 
     }
 
