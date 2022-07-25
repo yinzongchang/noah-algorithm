@@ -20,13 +20,13 @@ public class SimpleLimiter2 {
     /**
      * 令牌桶最大个数
      */
-    private long maxTokenNum = 3;
+    private final long maxTokenNum = 3;
 
     /**
      * 1秒
      * 单位：纳秒
      */
-    private long speed = 1000000000;
+    private final long speed = 1000000000;
 
     /**
      * 下一次产生令牌的时间
@@ -36,7 +36,7 @@ public class SimpleLimiter2 {
 
     /**
      * 重置时间、令牌
-     *
+     * <p>
      * 如果当前时间大于next时间，需要重置令牌个数
      * next = now
      *
