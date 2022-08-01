@@ -43,6 +43,7 @@ public class CoinChange2 {
         // dp[i] = x 表示 凑成金额 i 的组合数为 x
         int[] dp = new int[amount + 1];
 
+        // 不选取任何硬币时，金额之和才为 0，因此只有 1 种硬币组合。
         dp[0] = 1;
 
         for (int i = 0; i < coins.length; i++) {
@@ -50,6 +51,7 @@ public class CoinChange2 {
 
             for (int j = coins[i]; j <= amount; j++) {
 
+                // 使用不同硬币得到的组合数量要相加
                 dp[j] = dp[j] + dp[j - coins[i]];
 
             }

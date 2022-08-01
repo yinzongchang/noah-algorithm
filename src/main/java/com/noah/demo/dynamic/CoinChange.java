@@ -34,7 +34,6 @@ public class CoinChange {
 
 
         // dp[i] = x 表示 凑成总额 i 所需的 硬币数量 x
-
         // dp[i] = min(dp[i], dp[i - coin] + 1)
         int[] dp = new int[amount + 1];
 
@@ -44,6 +43,10 @@ public class CoinChange {
         Arrays.fill(dp, amount + 1);
 
 
+        /**
+         * dp[i] = x 凑成金额 i 所需要的硬币数量
+         * 如果 当前金额 大于 硬币面值 dp[i] = min(dp[i], dp[i - coin] + 1)
+         */
         for (int i = 1; i <= amount; i++) {
 
             for (int j = 0; j < coins.length; j++) {

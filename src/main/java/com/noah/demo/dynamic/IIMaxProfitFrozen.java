@@ -102,7 +102,6 @@ public class IIMaxProfitFrozen {
             f0 = f0New;
             f1 = f1New;
             f2 = f2New;
-
         }
 
         return Math.max(f1, f2);
