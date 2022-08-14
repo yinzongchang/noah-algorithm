@@ -1,4 +1,4 @@
-package com.noah.demo.array;
+package com.noah.demo.doublepointer;
 
 /**
  * Title: RemoveDuplicates.java <br>
@@ -51,7 +51,7 @@ public class RemoveDuplicates {
 
         while (fast < nums.length) {
 
-            if (nums[fast - 1] != nums[fast]) {
+            if (nums[slow - 1] != nums[fast]) {
 
                 nums[slow] = nums[fast];
                 slow++;
