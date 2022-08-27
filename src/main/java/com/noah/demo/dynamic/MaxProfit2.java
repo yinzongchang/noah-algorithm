@@ -21,7 +21,6 @@ public class MaxProfit2 {
      * 链接：https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
-
     public int maxProfit(int[] prices) {
 
         if (prices == null) {
