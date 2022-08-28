@@ -33,6 +33,7 @@ public class SingleNumber2 {
         // int 32 位计算
         for (int i = 0; i < 32; i++) {
 
+            // 计算前数据右移 i 位的和
             int cnt = 0;
 
             for (int num : nums) {
@@ -40,6 +41,7 @@ public class SingleNumber2 {
                 cnt += (num >> i) & 1;
             }
 
+            // 不是出现3次的数据
             if (cnt % 3 != 0) {
 
                 ans |= 1 << i;
