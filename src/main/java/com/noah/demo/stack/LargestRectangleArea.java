@@ -33,7 +33,7 @@ public class LargestRectangleArea {
         int maxArea = 0;
         List<Integer> areaList = new ArrayList<>();
 
-        Deque<Integer> stack = new ArrayDeque<Integer>();
+        Deque<Integer> stack = new ArrayDeque<>();
 
         for (int i = 0; i < len; i++) {
 
