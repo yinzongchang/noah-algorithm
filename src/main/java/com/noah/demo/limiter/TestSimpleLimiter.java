@@ -39,11 +39,11 @@ public class TestSimpleLimiter {
                 long end = System.nanoTime();
 
 //                System.out.println(Thread.currentThread().getName() + "提交任务" + finalI + "===" + (end - start) / 1000000);
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+//                try {
+//                    Thread.sleep(2000);
+//                } catch (InterruptedException e) {
+//                    throw new RuntimeException(e);
+//                }
 
                 System.out.println(Thread.currentThread().getName() + "完成任务" + finalI + "===" + (end - startAtomic.get()) / 1000000);
                 startAtomic.set(end);

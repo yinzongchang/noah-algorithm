@@ -22,24 +22,27 @@ public class TestSimpleLimiter2 {
 
         SimpleLimiter2 simpleLimiter = new SimpleLimiter2();
 
-        ExecutorService executorService = new ThreadPoolExecutor(10, 10, 0,
-                TimeUnit.SECONDS, new ArrayBlockingQueue<>(100));
-
+        ExecutorService executorService = new ThreadPoolExecutor(
+                10,
+                10,
+                0,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(100));
 
         for (int i = 0; i < 30; i++) {
 
             long start = System.nanoTime();
             AtomicLong startAtomic = new AtomicLong(start);
 
-            if (i % 5 == 0) {
-
-                try {
-                    TimeUnit.SECONDS.sleep(5);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-
-            }
+//            if (i % 5 == 0) {
+//
+//                try {
+//                    TimeUnit.SECONDS.sleep(5);
+//                } catch (InterruptedException e) {
+//                    throw new RuntimeException(e);
+//                }
+//
+//            }
 
             int finalI = i;
             simpleLimiter.acquire();
@@ -49,11 +52,11 @@ public class TestSimpleLimiter2 {
                 long end = System.nanoTime();
 
 //                System.out.println(Thread.currentThread().getName() + "提交任务" + finalI + "===" + (end - start) / 1000000);
-//                try {
-//                    Thread.sleep(2000);
-//                } catch (InterruptedException e) {
-//                    throw new RuntimeException(e);
-//                }
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
 
                 System.out.println(Thread.currentThread().getName() + "完成任务" + finalI + "===" + (end - startAtomic.get()) / 1000000);
                 startAtomic.set(end);

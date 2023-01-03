@@ -21,7 +21,7 @@ public class SimpleLimiter {
     private long next = System.nanoTime();
 
     /**
-     * 1秒
+     * 1秒 = 10E9 纳秒
      * 单位：纳秒
      */
     private final long speed = 1000000000;
