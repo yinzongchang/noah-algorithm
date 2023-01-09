@@ -56,7 +56,7 @@ public class Fish {
                 stack.pop();
             }
 
-            // 如果心来的鱼没有被吃掉，就入栈
+            // 如果新来的鱼没有被吃掉，就入栈
             if (!hasEat) {
                 stack.push(i);
             }
