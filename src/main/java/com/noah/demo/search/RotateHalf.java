@@ -1,7 +1,5 @@
 package com.noah.demo.search;
 
-import org.junit.Test;
-
 /**
  * Title: RotateHalf.java <br>
  * Description:             <br>
@@ -84,7 +82,6 @@ public class RotateHalf {
     }
 
 
-
     public int search2(int[] nums, int target) {
 
         if (nums == null || nums.length == 0) {
@@ -134,13 +131,9 @@ public class RotateHalf {
     }
 
 
-
-
-
-
     public static void main(String[] args) {
 
-        System.out.println(new RotateHalf().search2(new int[]{4,5,6,7,0,1,2}, 3));
+        System.out.println(new RotateHalf().search2(new int[]{4, 5, 6, 7, 0, 1, 2}, 3));
 
 
     }
