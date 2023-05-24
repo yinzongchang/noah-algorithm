@@ -1,7 +1,7 @@
 package com.noah.demo;
 
 import com.alibaba.fastjson.JSONObject;
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,19 +47,19 @@ public class Test {
 //        System.out.println(C.codePointCount(0,B.length()));
 
 
-        List<Integer> list = new ArrayList<>(2);
-        list.add(1);
-        list.add(2);
-
-        list.add(1, 33);
-
-        System.out.println(JSONObject.toJSONString(list));
-
-
-        Pair<String, Long> pair = new Pair<>("xiaohong", 1L);
-
-        System.out.println(pair.getKey());
-        System.out.println(pair.getValue());
+//        List<Integer> list = new ArrayList<>(2);
+//        list.add(1);
+//        list.add(2);
+//
+//        list.add(1, 33);
+//
+//        System.out.println(JSONObject.toJSONString(list));
+//
+//
+//        Pair<String, Long> pair = new Pair<>("xiaohong", 1L);
+//
+//        System.out.println(pair.getKey());
+//        System.out.println(pair.getValue());
 
 
     }

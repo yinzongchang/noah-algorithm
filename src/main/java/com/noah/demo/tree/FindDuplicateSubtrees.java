@@ -1,6 +1,6 @@
 package com.noah.demo.tree;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ import java.util.*;
  */
 public class FindDuplicateSubtrees {
 
-    Map<String, Pair<TreeNode, Integer>> seen = new HashMap<>();
+//    Map<String, Pair<TreeNode, Integer>> seen = new HashMap<>();
 
     Set<TreeNode> repeat = new HashSet<>();
 
@@ -34,34 +34,34 @@ public class FindDuplicateSubtrees {
      * @param root
      * @return
      */
-    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-
-        dfs(root);
-
-        return new ArrayList<>(repeat);
-    }
-
-    private int dfs(TreeNode root) {
-
-        if (root == null) {
-            return 0;
-        }
-
-        int[] tri = {root.val, dfs(root.left), dfs(root.right)};
-
-        String hash = Arrays.toString(tri);
-
-        if (seen.containsKey(hash)) {
-
-            Pair<TreeNode, Integer> pair = seen.get(hash);
-            repeat.add(pair.getKey());
-
-            return pair.getValue();
-        } else {
-            seen.put(hash, new Pair<>(root, ++idx));
-            return idx;
-        }
-    }
+//    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+//
+//        dfs(root);
+//
+//        return new ArrayList<>(repeat);
+//    }
+//
+//    private int dfs(TreeNode root) {
+//
+//        if (root == null) {
+//            return 0;
+//        }
+//
+//        int[] tri = {root.val, dfs(root.left), dfs(root.right)};
+//
+//        String hash = Arrays.toString(tri);
+//
+//        if (seen.containsKey(hash)) {
+//
+//            Pair<TreeNode, Integer> pair = seen.get(hash);
+//            repeat.add(pair.getKey());
+//
+//            return pair.getValue();
+//        } else {
+//            seen.put(hash, new Pair<>(root, ++idx));
+//            return idx;
+//        }
+//    }
 
 
 }
