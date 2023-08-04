@@ -89,8 +89,6 @@ public class BinarySearchII {
         int target = 4;
 
         System.out.println(new BinarySearchII().search2(arr, target));
-
-
     }
 
 

@@ -8,7 +8,6 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author yinzongchang
  * 创建时间 2023/2/21
  * @since 1.0
- * 版权所有 2020 北京卡路里信息技术有限公司
  */
 public class TestAtomic {
 

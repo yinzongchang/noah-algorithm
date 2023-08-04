@@ -1,4 +1,4 @@
-package com.noah.demo.gc;
+package com.noah.base.gc;
 
 
 // Run with java -XX:+PrintGC -Xmn100M -XX:PretenureSizeThreshold=10000 LifetimeTest

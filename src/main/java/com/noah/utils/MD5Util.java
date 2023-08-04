@@ -12,7 +12,6 @@ import java.security.NoSuchAlgorithmException;
  * @author yinzongchang
  * 创建时间 2023/3/10
  * @since 1.0
- * 版权所有 2020 北京卡路里信息技术有限公司
  */
 public class MD5Util {
 
